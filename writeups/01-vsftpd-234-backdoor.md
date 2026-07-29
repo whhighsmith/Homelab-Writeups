@@ -19,17 +19,25 @@ A vulnerability scan and exploitation exercise was conducted against a lab targe
 ---
 ### Scope & Environment
 Target: Metasploitable2, `10.10.10.20`
+
 Network: isolated lab segment (vmbr1) — no internet or home LAN exposure
+
 Tools: nmap, Metasploit Framework
+
 Environment reference: full lab build and network design documented separately in homelab-build.md
+
 Authorization: self-owned lab environment, isolated from production/home network
 
 ---
 ### Methodology
 Reconnaissance — nmap service/version scan against the target
+
 Vulnerability identification — matched an identified service version to a known critical vulnerability
+
 Exploitation — used the corresponding Metasploit module to trigger the vulnerability
+
 Post-exploitation verification — confirmed access level obtained on the target
+
 ---
 ### Reconnaissance
 An nmap version/script scan was run against the target from Kali:
