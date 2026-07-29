@@ -8,7 +8,9 @@
 
 ## Tester:	Will
 
-## Tools Used:	nmap, Metasploit Framework	Severity	Critical
+## Tools Used:	nmap, Metasploit Framework	
+
+## Severity:	Critical
 
 ---
 ### Executive Summary
