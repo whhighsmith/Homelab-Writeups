@@ -11,11 +11,11 @@
 ## Tools Used:	nmap, Metasploit Framework	Severity	Critical
 
 ---
-# Executive Summary
+### Executive Summary
 A vulnerability scan and exploitation exercise was conducted against a lab target running vsftpd 2.3.4. An unauthenticated remote attacker could exploit a known backdoor in this software version to gain full root-level access to the system. This represents a critical severity finding.
 
 ---
-# Scope & Environment
+### Scope & Environment
 Target: Metasploitable2, `10.10.10.20`
 Network: isolated lab segment (vmbr1) — no internet or home LAN exposure
 Tools: nmap, Metasploit Framework
@@ -23,13 +23,13 @@ Environment reference: full lab build and network design documented separately i
 Authorization: self-owned lab environment, isolated from production/home network
 
 ---
-# Methodology
+### Methodology
 Reconnaissance — nmap service/version scan against the target
 Vulnerability identification — matched an identified service version to a known critical vulnerability
 Exploitation — used the corresponding Metasploit module to trigger the vulnerability
 Post-exploitation verification — confirmed access level obtained on the target
 ---
-# Reconnaissance
+### Reconnaissance
 An nmap version/script scan was run against the target from Kali:
 ```bash
 nmap -sV -sC 10.10.10.20
@@ -37,7 +37,7 @@ nmap -sV -sC 10.10.10.20
 The scan returned numerous open ports consistent with Metasploitable2's intentionally vulnerable service set. Port 21 was identified running vsftpd 2.3.4 — a version with a well-documented, publicly known backdoor.
 
 ---
-# Findings — Detailed
+### Findings — Detailed
 Finding 1: Unauthenticated Remote Root via vsftpd 2.3.4 Backdoor
 Field	Details
 Title	Unauthenticated Remote Root via vsftpd 2.3.4 Backdoor
@@ -65,7 +65,7 @@ Server username: root
 meterpreter > sysinfo
 ```
 ---
-# Detection Opportunities
+### Detection Opportunities
 Connecting this offensive finding back to defensive visibility is the most valuable part of this exercise for SOC-relevant skill-building.
 Log/network signatures: an anomalous, non-standard string in the FTP USER command during the authentication attempt; an outbound/local connection immediately opened on TCP port 6200 shortly after the FTP session — a port with no legitimate association with FTP service behavior.
 Data sources needed to detect this: FTP application/service logs, network flow data (netflow/Zeek), and EDR process-creation telemetry showing a shell spawned by the FTP service process.
