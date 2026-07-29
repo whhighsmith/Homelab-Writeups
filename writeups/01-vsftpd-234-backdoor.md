@@ -4,7 +4,7 @@
 
 ## Date:	July 2026
 
-## Environment:	See homelab-build.md	
+## Environment:	[homelab-build.md](../homelab-build.md)	
 
 ## Tester:	Will
 
