@@ -2,7 +2,7 @@
 
 A self-hosted penetration testing lab built from scratch on a Proxmox VE hypervisor, used to develop hands-on offensive security and detection-engineering skills. This repo documents the environment build and each exploitation exercise performed against it.
 
-Built and maintained by Will — IT Coordinator (healthcare/HIPAA environment) working toward a SOC/Security Analyst role. CompTIA Security+ (SY0-701), Google Cybersecurity Certificate.
+Built and maintained by Will — IT Coordinator working toward a SOC/Security Analyst role. CompTIA Security+ (SY0-701), Google Cybersecurity Certificate.
 
 ## Why this repo exists
 
