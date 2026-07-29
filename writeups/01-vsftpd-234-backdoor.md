@@ -1,9 +1,16 @@
 Finding 01: vsftpd 2.3.4 Backdoor
 Unauthenticated Remote Root — Metasploitable2
 			
-Target	Metasploitable2 (10.10.10.20)	Date	July 2026
-Environment	See homelab-build.md	Tester	Will
-Tools Used	nmap, Metasploit Framework	Severity	Critical
+Target:	Metasploitable2 (10.10.10.20)
+
+Date:	July 2026
+
+Environment:	See homelab-build.md	
+
+Tester:	Will
+
+Tools Used:	nmap, Metasploit Framework	Severity	Critical
+
 ---
 # Executive Summary
 A vulnerability scan and exploitation exercise was conducted against a lab target running vsftpd 2.3.4. An unauthenticated remote attacker could exploit a known backdoor in this software version to gain full root-level access to the system. This represents a critical severity finding.
